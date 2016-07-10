@@ -1,0 +1,10 @@
+// All rule-generating imports go here vs in etc/all.scss so that they will
+// cascade after the framework rules. 
+@import "../etc/weather-icons-core.scss";
+
+// The "x-wi" class should be used in Ext JS applications instead
+// of "wi".  The "wi" class sets some properties that may collide
+// with theme properties, whereas "x-wi" sets only the font-family.
+.#{$prefix}wi:before {
+    font-family: weathericons !important;
+}
